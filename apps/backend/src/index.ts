@@ -171,3 +171,5 @@ if (process.env.NODE_ENV != "production") {
 
 // 6. Export app agar dikenali oleh serverless Vercel
 export default app;
+
+// Trigger Vercel Rebuild Baru

@@ -16,8 +16,8 @@ export default function App() {
   const [users, setUsers] = useState<User[]>([])
 
   const loadUsers = async () => {
-    // ⬇️ Menggunakan VITE_BACKEND_URL dari .env
-    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/users`)
+    // ⬇️ Tambahan ?key=learn agar aman dari blokir 401
+    const res = await fetch(`${import.meta.env.VITE_BACKEND_URL}/users?key=learn`)
     const data: ApiResponse<User[]> = await res.json()
 
     setUsers(data.data)
